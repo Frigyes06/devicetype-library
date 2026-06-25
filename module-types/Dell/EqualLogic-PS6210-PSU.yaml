@@ -1,0 +1,14 @@
+---
+manufacturer: Dell
+model: EqualLogic PS6210 PSU
+part_number: Generic PS6210 PSU
+profile: Power supply
+attribute_data:
+  hot_swappable: true
+  input_current: AC
+  input_voltage: 240
+
+power-ports:
+  - name: Power
+    label: Power
+    type: iec-60320-c14

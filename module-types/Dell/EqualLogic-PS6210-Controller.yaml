@@ -1,0 +1,43 @@
+---
+manufacturer: Dell
+model: EqualLogic PS6210 Controller
+part_number: Generic PS6210 Controller
+comments: >
+  Generic Dell EqualLogic PS6210 controller module. eth0 and eth1 each expose
+  two alternate physical media connectors: 10GBASE-T RJ45 and 10G SFP+.
+  Only one connector in each eth pair should be cabled at a time.
+
+console-ports:
+  - name: Serial
+    label: Serial
+    type: de-9
+
+interfaces:
+  - name: eth0-rj45
+    label: ETH0 RJ45
+    type: 10gbase-t
+    description: >
+      Alternate media for logical interface eth0. Only one of eth0-rj45 or
+      eth0-sfp should be connected.
+  - name: eth0-sfp
+    label: ETH0 SFP+
+    type: 10gbase-x-sfpp
+    description: >
+      Alternate media for logical interface eth0. Only one of eth0-rj45 or
+      eth0-sfp should be connected.
+  - name: eth1-rj45
+    label: ETH1 RJ45
+    type: 10gbase-t
+    description: >
+      Alternate media for logical interface eth1. Only one of eth1-rj45 or
+      eth1-sfp should be connected.
+  - name: eth1-sfp
+    label: ETH1 SFP+
+    type: 10gbase-x-sfpp
+    description: >
+      Alternate media for logical interface eth1. Only one of eth1-rj45 or
+      eth1-sfp should be connected.
+  - name: mgmt
+    label: Management
+    type: 1000base-t
+    mgmt_only: true
